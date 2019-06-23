@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gif Central</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Signika+Negative&display=swap" rel="stylesheet">
+    
+</head>
+
+<body><br>
+
+<h1>WELCOME TO GIF CENTRAL</h1>
+<h2>featuring TV shows</h2>
+    
+<br><br>
+
+
+<div id="buttons">
+<div style="text-align:center;">
+
+    <button data-show="Friends">
+        Friends
+    </button>
+
+    <button data-show="Always Sunny">
+        Always Sunny in Philadelphia
+    </button>
+
+    <button data-show="GOT">
+        Game of Thrones
+    </button>
+
+    <button data-show="BLL">
+        Big Little Lies
+    </button>
+
+    <button data-show="GOT">
+        The Office
+    </button>
+
+    <button data-show="BLL">
+        How I Met Your Mother
+    </button>
+
+</div>
+</div>
+        
+
+<div id="gifs are here">
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+$("button").on("click", function() {
+      var show = $(this).attr("data-show");
+      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+        show + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+});
+</script>
+    
+</body>
+</html>
