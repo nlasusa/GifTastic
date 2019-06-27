@@ -21,7 +21,6 @@ renderButtons();
    return;
 });
   
-  
  // Getting gifs from api... onto html
    $("button").on("click", function () {
    var movie = $(this).attr("data-movie");
@@ -35,12 +34,14 @@ $.ajax({
 
 var results = response.data;
 
+// Loop through each movie and provide new divs for their images and rating
 $("#movies").empty();
 for (var i = 0; i < results.length; i++) {
      var movieDiv = $("<div>");
      var p = $("<p>").text("Rating: " + results[i].rating);
      var movieImg = $("<img>");
-  
+
+  // Append movie and keep all gifs same fixed height 
      movieImg.attr("src", results[i].images.fixed_height.url);
      movieDiv.append(p);
      movieDiv.append(movieImg);
